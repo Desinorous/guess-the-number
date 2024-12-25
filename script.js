@@ -14,15 +14,12 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('.number').textContent = '?';
   //   document.querySelector('.message').textContent = 'Start guessing...';
   displayMessage('Start guessing...');
-  document.querySelector('.score').textContent = score;s
+  document.querySelector('.score').textContent = score;
   document.querySelector('.guess').value = '';
   document.querySelector('body').style.backgroundColor = '#222';
-  // document.querySelector('.score').style.width = '15rem';
-  document.querySelector('.number').style.width = window.matchMedia(
-    '(max-width: 740px)'
-  ).matches
-    ? '15rem'
-    : '30rem';
+  document.querySelector('.number').style.width = '15rem';
+  
+  window.matchMedia('(max-width: 740px)').querySelector('.number').style.width = '15rem';
 });
 
 document.querySelector('.check').addEventListener('click', function () {
@@ -41,12 +38,8 @@ document.querySelector('.check').addEventListener('click', function () {
     }
     document.querySelector('body').style.backgroundColor = '#60b347';
 
-    // document.querySelector('.number').style.width = '30rem';
-    document.querySelector('.number').style.width = window.matchMedia(
-      '(max-width: 740px)'
-    ).matches
-      ? '30rem'
-      : '15rem';
+    document.querySelector('.number').style.width = '30rem';
+    window.matchMedia('(max-width: 740px)').querySelector('.number').style.width = '30rem';
   } else if (guess !== secretNumber) {
     // document.querySelector('.message').textContent = guess > secretNumber ? '🤡 Too High' : '💀 Too Low';
     displayMessage(guess > secretNumber ? '🤡 Too High' : '💀 Too Low');
