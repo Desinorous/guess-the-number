@@ -17,7 +17,12 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('.score').textContent = score;
   document.querySelector('.guess').value = '';
   document.querySelector('body').style.backgroundColor = '#222';
-  document.querySelector('.score').style.width = '15rem';
+  // document.querySelector('.score').style.width = '15rem';
+  document.querySelector('.number').style.width = window.matchMedia(
+    '(max-width: 740px)'
+  ).matches
+    ? '15rem'
+    : '30rem';
 });
 
 document.querySelector('.check').addEventListener('click', function () {
@@ -36,7 +41,12 @@ document.querySelector('.check').addEventListener('click', function () {
     }
     document.querySelector('body').style.backgroundColor = '#60b347';
 
-    document.querySelector('.number').style.width = '30rem';
+    // document.querySelector('.number').style.width = '30rem';
+    document.querySelector('.number').style.width = window.matchMedia(
+      '(max-width: 740px)'
+    ).matches
+      ? '30rem'
+      : '15rem';
   } else if (guess !== secretNumber) {
     // document.querySelector('.message').textContent = guess > secretNumber ? '🤡 Too High' : '💀 Too Low';
     displayMessage(guess > secretNumber ? '🤡 Too High' : '💀 Too Low');
