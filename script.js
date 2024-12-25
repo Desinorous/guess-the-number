@@ -9,12 +9,12 @@ const displayMessage = function (message) {
 };
 
 document.querySelector('.again').addEventListener('click', function () {
-  secretNumber = Math.trunc(Math.random() * 20) + 1;
+  secretNumber = Math.trunc(Math.random() * 100) + 1;
   score = 20;
   document.querySelector('.number').textContent = '?';
   //   document.querySelector('.message').textContent = 'Start guessing...';
   displayMessage('Start guessing...');
-  document.querySelector('.score').textContent = score;
+  document.querySelector('.score').textContent = score;s
   document.querySelector('.guess').value = '';
   document.querySelector('body').style.backgroundColor = '#222';
   // document.querySelector('.score').style.width = '15rem';
