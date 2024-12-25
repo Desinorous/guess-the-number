@@ -142,8 +142,9 @@ h1 {
   }
 
   .number {
-    height: 10rem;
-    bottom: 50px;
+    height: 8rem;
+    bottom: 40px;
+    padding: 2rem 0;
   }
 
   h1 {
@@ -155,10 +156,17 @@ h1 {
   }
 
   .btn {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    padding: 1rem 2rem;
   }
 
   .between {
     top: 3rem;
+  }
+
+  .guess{
+    padding: 1.5rem;
+    width: 20rem;
+    margin-bottom: 2rem;
   }
 }
