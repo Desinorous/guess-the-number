@@ -129,6 +129,7 @@ h1 {
 
   main {
     flex-direction: column;
+    height: 60vh;
   }
 
   .right {
@@ -168,5 +169,9 @@ h1 {
     padding: 1.5rem;
     width: 20rem;
     margin-bottom: 2rem;
+  }
+
+  .message{
+    margin-bottom: 3rem;
   }
 }
